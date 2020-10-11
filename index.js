@@ -3,6 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
+const writeFile = util.promisify(fs.writeFile)
 // array of questions for user
 const questions = [
   {
@@ -60,7 +61,14 @@ const questions = [
 ];
 
 // function to write README file
-function writeToFile(fileName, data) {}
+async function writeToFile(fileName, data) {
+  try {
+  await writeFile(fileName, data);
+  }
+  catch {
+    throw Error();
+  }
+}
 
 // function to initialize program
 async function init() {
@@ -159,7 +167,7 @@ async function init() {
     proInformation.proTable.title = generateMarkdown(proInformation.proTable);
       fileContent = `
       ${proInformation.proLicense.badge}
-      
+
 
       ${proInformation.projTitle.title}
       ${proInformation.proDesc.title}
@@ -196,6 +204,7 @@ async function init() {
       ${proInformation.proQuestions.additional}
       `;
       console.log(fileContent);
+      writeToFile("README.md", fileContent);
   } catch (err) {
     console.log(err);
   }
