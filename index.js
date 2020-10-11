@@ -102,7 +102,7 @@ async function init() {
       proLicense: {
         title: "License",
         content: license,
-        badge: {},
+        badge: "[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)",
       },
       proContribution: {
         title: "Contributing",
@@ -137,7 +137,7 @@ async function init() {
           ].title.toLowerCase()})
        `;
         }
-      }
+      }      
     }
     console.log(tableOfContents);
     proInformation.projTitle.title = generateMarkdown(proInformation.projTitle);
@@ -157,6 +157,45 @@ async function init() {
       proInformation.proQuestions
     );
     proInformation.proTable.title = generateMarkdown(proInformation.proTable);
+      fileContent = `
+      ${proInformation.proLicense.badge}
+      
+
+      ${proInformation.projTitle.title}
+      ${proInformation.proDesc.title}
+      ${proInformation.proDesc.content}
+
+
+      ${proInformation.proTable.title}
+      ${tableOfContents}
+
+
+      ${proInformation.proInstallation.title}
+      ${proInformation.proInstallation.content}
+
+
+      ${proInformation.proUsage.title}
+      ${proInformation.proUsage.content}
+
+
+      ${proInformation.proLicense.title}
+      ${proInformation.proLicense.content}
+
+
+      ${proInformation.proContribution.title}
+      ${proInformation.proContribution.content}
+
+
+      ${proInformation.proTest.title}
+      ${proInformation.proTest.content}
+
+      
+      ${proInformation.proQuestions.title}
+      ${proInformation.proQuestions.content}
+      ${proInformation.proQuestions.email}
+      ${proInformation.proQuestions.additional}
+      `;
+      console.log(fileContent);
   } catch (err) {
     console.log(err);
   }
