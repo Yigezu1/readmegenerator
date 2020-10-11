@@ -1,6 +1,8 @@
+const { info } = require("console");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 // array of questions for user
 const questions = [
   {
@@ -76,6 +78,85 @@ async function init() {
       additional,
     } = await inquirer.prompt(questions);
     console.log(title);
+    const proInformation = {
+      projTitle: {
+        title: title,
+        type: "Title",
+        content: title,
+      },
+      proDesc: {
+        title: "Description",
+        content: description,
+      },
+      proTable: {
+        title: "Table of Contents",
+      },
+      proInstallation: {
+        title: "Installation",
+        content: installation,
+      },
+      proUsage: {
+        title: "Usage",
+        content: usage,
+      },
+      proLicense: {
+        title: "License",
+        content: license,
+        badge: {},
+      },
+      proContribution: {
+        title: "Contributing",
+        content: contribution,
+      },
+
+      proTest: {
+        title: "Tests",
+        content: tests,
+      },
+      proQuestions: {
+        title: "Questions",
+        content: userName,
+        email: email,
+        additional: additional,
+      },
+    };
+
+    let tableOfContents = "";
+    let fileContent = "";
+    for (const info in proInformation) {
+      if (proInformation[info].content) {
+        if (
+          !(
+            proInformation[info] === proInformation.projTitle ||
+            proInformation[info] === proInformation.proDesc
+          )
+        ) {
+          tableOfContents += `
+       * [${proInformation[info].title}](#${proInformation[
+            info
+          ].title.toLowerCase()})
+       `;
+        }
+      }
+    }
+    console.log(tableOfContents);
+    proInformation.projTitle.title = generateMarkdown(proInformation.projTitle);
+    proInformation.proDesc.title = generateMarkdown(proInformation.proDesc);
+    proInformation.proInstallation.title = generateMarkdown(
+      proInformation.proInstallation
+    );
+    proInformation.proUsage.title = generateMarkdown(proInformation.proUsage);
+    proInformation.proLicense.title = generateMarkdown(
+      proInformation.proLicense
+    );
+    proInformation.proContribution.title = generateMarkdown(
+      proInformation.proContribution
+    );
+    proInformation.proTest.title = generateMarkdown(proInformation.proTest);
+    proInformation.proQuestions.title = generateMarkdown(
+      proInformation.proQuestions
+    );
+    proInformation.proTable.title = generateMarkdown(proInformation.proTable);
   } catch (err) {
     console.log(err);
   }
