@@ -4,6 +4,7 @@ const inquirer = require("inquirer");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 const writeFile = util.promisify(fs.writeFile)
+const TurndownService = require('turndown');
 // array of questions for user
 const questions = [
   {
@@ -62,7 +63,7 @@ const questions = [
 
 // function to write README file
 async function writeToFile(fileName, data) {
-  try {
+  try { 
   await writeFile(fileName, data);
   }
   catch {
@@ -204,7 +205,9 @@ async function init() {
       ${proInformation.proQuestions.additional}
       `;
       console.log(fileContent);
-      writeToFile("README.md", fileContent);
+      const turndownService = new TurndownService();
+      const data= turndownService.turndown(fileContent);
+      writeToFile("README.md", data);
   } catch (err) {
     console.log(err);
   }
