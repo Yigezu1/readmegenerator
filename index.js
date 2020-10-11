@@ -1,6 +1,6 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
-const util = require(util);
+const util = require("util");
 // array of questions for user
 const questions = [
   {
@@ -20,14 +20,15 @@ const questions = [
   },
   {
     type: "input",
-    message: "What usage information you want to provide to the users of your project?",
+    message:
+      "What usage information you want to provide to the users of your project?",
     name: "usage",
   },
   {
     type: "list",
     message: "What is the license type of your project?",
     name: "license",
-    choices: ["option1", "option2", "option3", "option4"]
+    choices: ["option1", "option2", "option3", "option4"],
   },
   {
     type: "input",
@@ -42,7 +43,7 @@ const questions = [
   {
     type: "input",
     message: "What is your github user name?",
-    name: "questions",
+    name: "userName",
   },
   {
     type: "input",
@@ -60,7 +61,25 @@ const questions = [
 function writeToFile(fileName, data) {}
 
 // function to initialize program
-function init() {}
+async function init() {
+  try {
+    const {
+      title,
+      description,
+      installation,
+      usage,
+      license,
+      contribution,
+      tests,
+      userName,
+      email,
+      additional,
+    } = await inquirer.prompt(questions);
+    console.log(title);
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 // function call to initialize program
 init();
