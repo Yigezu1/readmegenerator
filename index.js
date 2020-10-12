@@ -1,10 +1,9 @@
-const { info } = require("console");
 const fs = require("fs");
 const inquirer = require("inquirer");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
 const writeFile = util.promisify(fs.writeFile);
-const TurndownService = require("turndown");
+const axios = require("axios");
 // array of questions for user
 const questions = [
   {
@@ -132,6 +131,10 @@ async function init() {
         additional: additional,
       },
     };
+    const queryUrl = `https://api.github.com/users/${proInformation.proQuestions
+  .content}`;
+ const axiosResponse = await axios.get(queryUrl);
+ proInformation.proQuestions.content = `[${axiosResponse.data.name}](${axiosResponse.data.blog})`;
     switch (proInformation.proLicense.content) {
       case "Apache License v2.0":
         proInformation.proLicense.badge =
