@@ -3,8 +3,8 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const util = require("util");
 const generateMarkdown = require("./utils/generateMarkdown");
-const writeFile = util.promisify(fs.writeFile)
-const TurndownService = require('turndown');
+const writeFile = util.promisify(fs.writeFile);
+const TurndownService = require("turndown");
 // array of questions for user
 const questions = [
   {
@@ -63,10 +63,9 @@ const questions = [
 
 // function to write README file
 async function writeToFile(fileName, data) {
-  try { 
-  await writeFile(fileName, data);
-  }
-  catch {
+  try {
+    await writeFile(fileName, data);
+  } catch {
     throw Error();
   }
 }
@@ -111,7 +110,8 @@ async function init() {
       proLicense: {
         title: "License",
         content: license,
-        badge: "[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)",
+        badge:
+          "[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)",
       },
       proContribution: {
         title: "Contributing",
@@ -146,7 +146,7 @@ async function init() {
           ].title.toLowerCase()})
        `;
         }
-      }      
+      }
     }
     console.log(tableOfContents);
     proInformation.projTitle.title = generateMarkdown(proInformation.projTitle);
@@ -166,7 +166,7 @@ async function init() {
       proInformation.proQuestions
     );
     proInformation.proTable.title = generateMarkdown(proInformation.proTable);
-      fileContent = `
+    fileContent = `
       ${proInformation.proLicense.badge}
 
 
@@ -204,11 +204,11 @@ async function init() {
       ${proInformation.proQuestions.email}
       ${proInformation.proQuestions.additional}
       `;
-      console.log(fileContent);
-      // const turndownService = new TurndownService();
-      // const data= turndownService.turndown(`<div>${fileContent}</div>
-      // `);
-      writeToFile("README.md", fileContent);
+    console.log(fileContent);
+    // const turndownService = new TurndownService();
+    // const data= turndownService.turndown(`<div>${fileContent}</div>
+    // `);
+    writeToFile("README.md", fileContent);
   } catch (err) {
     console.log(err);
   }
