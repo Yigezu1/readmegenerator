@@ -205,9 +205,10 @@ async function init() {
       ${proInformation.proQuestions.additional}
       `;
       console.log(fileContent);
-      const turndownService = new TurndownService();
-      const data= turndownService.turndown(fileContent);
-      writeToFile("README.md", data);
+      // const turndownService = new TurndownService();
+      // const data= turndownService.turndown(`<div>${fileContent}</div>
+      // `);
+      writeToFile("README.md", fileContent);
   } catch (err) {
     console.log(err);
   }
