@@ -1,4 +1,4 @@
-[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](#license)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
 
 
   # Readme Generator
@@ -7,7 +7,7 @@
   ## Description
 
   
-  Description goes here...
+  Description goes here ...
 
 
   ## Table of Contents
@@ -37,25 +37,25 @@
   ## Installation
 
   
-  Installation guidelines here...
+  Installation steps will be here....
 
 
   ## Usage
 
   
-  Usage information here....
+  Usage information will be provided here....
 
 
   ## License
 
   
-  GNU General Public License v3.0
+  MIT License
 
 
   ## Contributing
 
   
-  Contribution guidelines here...
+  Contribution guidelines will be here.....
 
 
   ## Tests
@@ -71,5 +71,5 @@
 
   yigezu.mulu@gmail.com
 
-  Additional information will be provided here.....
+  Additional information will be here....
   

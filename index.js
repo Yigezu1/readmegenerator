@@ -64,7 +64,7 @@ const questions = [
   },
 ];
 
-// function to write README file
+// function to write to README file
 async function writeToFile(fileName, data) {
   try {
     await writeFile(fileName, data);
@@ -88,7 +88,6 @@ async function init() {
       email,
       additional,
     } = await inquirer.prompt(questions);
-    console.log(title);
     const proInformation = {
       projTitle: {
         title: title,
@@ -131,10 +130,13 @@ async function init() {
         additional: additional,
       },
     };
-    const queryUrl = `https://api.github.com/users/${proInformation.proQuestions
-  .content}`;
- const axiosResponse = await axios.get(queryUrl);
- proInformation.proQuestions.content = `[${axiosResponse.data.name}](${axiosResponse.data.blog})`;
+
+    // axios get call to get user's github blog.
+    const queryUrl = `https://api.github.com/users/${proInformation.proQuestions.content}`;
+    const axiosResponse = await axios.get(queryUrl);
+    proInformation.proQuestions.content = `[${axiosResponse.data.name}](${axiosResponse.data.blog})`;
+
+    //  Creates badge based on the license type user selected.
     switch (proInformation.proLicense.content) {
       case "Apache License v2.0":
         proInformation.proLicense.badge =
@@ -150,8 +152,9 @@ async function init() {
       default:
         break;
     }
+
+    // Create table of contents
     let tableOfContents = "";
-    let fileContent = "";
     for (const info in proInformation) {
       if (proInformation[info].content) {
         if (
@@ -169,7 +172,8 @@ async function init() {
         }
       }
     }
-    console.log(tableOfContents);
+
+    // function call to the generateMarkdown function to create markdown file contents
     proInformation.projTitle.title = generateMarkdown(proInformation.projTitle);
     proInformation.proDesc.title = generateMarkdown(proInformation.proDesc);
     proInformation.proInstallation.title = generateMarkdown(
@@ -187,6 +191,9 @@ async function init() {
       proInformation.proQuestions
     );
     proInformation.proTable.title = generateMarkdown(proInformation.proTable);
+
+    // Generate the file that will be written to the readme file
+    let fileContent = "";
     fileContent = `${proInformation.proLicense.badge}
 
 
@@ -226,13 +233,10 @@ async function init() {
 
   ${proInformation.proQuestions.additional}
   `;
-    console.log(fileContent);
-    // const turndownService = new TurndownService();
-    // const data= turndownService.turndown(`<div>${fileContent}</div>
-    // `);
+    // function call to write the file to the readme.md
     writeToFile("README.md", fileContent);
-  } catch (err) {
-    console.log(err);
+  } catch {
+    throw Error();
   }
 }
 
