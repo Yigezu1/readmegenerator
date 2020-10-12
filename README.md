@@ -1,16 +1,19 @@
-      # Readme Generator
+[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
 
 
-      ## Description
-
-  
-      Description of the project...
+  # Readme Generator
 
 
-      ## Table of Contents
+  ## Description
 
   
-      
+  Project Description
+
+
+  ## Table of Contents
+
+  
+  
        * [Installation](#installation)
        
        * [Usage](#usage)
@@ -25,40 +28,40 @@
        
 
 
-      ## Installation
+  ## Installation
 
   
-      Steps to install the project
+  Steps required to install 
 
 
-      ## Usage
-
-  
-      usage information...
-
-
-      ## License
+  ## Usage
 
   
-      option1
+  usage information...
 
 
-      ## Contributing
-
-  
-      contribution guidelines....
-
-
-      ## Tests
+  ## License
 
   
-      Test instructions....
+  option1
+
+
+  ## Contributing
+
+  
+  contribution guidelines...
+
+
+  ## Tests
+
+  
+  test instructions
 
       
-      ## Questions
+  ## Questions
 
   
-      yigezu1
-      yige
-      Additional information
-      
+  yigezu1
+  yige
+  additional info...
+  

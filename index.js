@@ -140,7 +140,7 @@ async function init() {
             proInformation[info] === proInformation.proDesc
           )
         ) {
-          tableOfContents += `
+        tableOfContents += `
        * [${proInformation[info].title}](#${proInformation[
             info
           ].title.toLowerCase()})
@@ -166,44 +166,43 @@ async function init() {
       proInformation.proQuestions
     );
     proInformation.proTable.title = generateMarkdown(proInformation.proTable);
-    fileContent = `
-      ${proInformation.proLicense.badge}
+    fileContent = `${proInformation.proLicense.badge}
 
 
-      ${proInformation.projTitle.title}
-      ${proInformation.proDesc.title}
-      ${proInformation.proDesc.content}
+  ${proInformation.projTitle.title}
+  ${proInformation.proDesc.title}
+  ${proInformation.proDesc.content}
 
 
-      ${proInformation.proTable.title}
-      ${tableOfContents}
+  ${proInformation.proTable.title}
+  ${tableOfContents}
 
 
-      ${proInformation.proInstallation.title}
-      ${proInformation.proInstallation.content}
+  ${proInformation.proInstallation.title}
+  ${proInformation.proInstallation.content}
 
 
-      ${proInformation.proUsage.title}
-      ${proInformation.proUsage.content}
+  ${proInformation.proUsage.title}
+  ${proInformation.proUsage.content}
 
 
-      ${proInformation.proLicense.title}
-      ${proInformation.proLicense.content}
+  ${proInformation.proLicense.title}
+  ${proInformation.proLicense.content}
 
 
-      ${proInformation.proContribution.title}
-      ${proInformation.proContribution.content}
+  ${proInformation.proContribution.title}
+  ${proInformation.proContribution.content}
 
 
-      ${proInformation.proTest.title}
-      ${proInformation.proTest.content}
+  ${proInformation.proTest.title}
+  ${proInformation.proTest.content}
 
       
-      ${proInformation.proQuestions.title}
-      ${proInformation.proQuestions.content}
-      ${proInformation.proQuestions.email}
-      ${proInformation.proQuestions.additional}
-      `;
+  ${proInformation.proQuestions.title}
+  ${proInformation.proQuestions.content}
+  ${proInformation.proQuestions.email}
+  ${proInformation.proQuestions.additional}
+  `;
     console.log(fileContent);
     // const turndownService = new TurndownService();
     // const data= turndownService.turndown(`<div>${fileContent}</div>
