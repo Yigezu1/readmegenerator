@@ -1,4 +1,4 @@
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](#license)
 
 
   # Readme Generator
@@ -7,7 +7,7 @@
   ## Description
 
   
-  Description goes here ...
+  Description goes here .....
 
 
   ## Table of Contents
@@ -37,31 +37,31 @@
   ## Installation
 
   
-  Installation steps will be here....
+  Installation steps .....
 
 
   ## Usage
 
   
-  Usage information will be provided here....
+  Usage information......
 
 
   ## License
 
   
-  MIT License
+  Apache License v2.0
 
 
   ## Contributing
 
   
-  Contribution guidelines will be here.....
+  Contribution guidelines...
 
 
   ## Tests
 
   
-  Test instructions will be provided here....
+  Test instructions .....
 
       
   ## Questions
@@ -71,5 +71,5 @@
 
   yigezu.mulu@gmail.com
 
-  Additional information will be here....
+  Additional information....
   
