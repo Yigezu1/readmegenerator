@@ -1,43 +1,49 @@
 [![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
 
 
-  # Readme Generator
+  # Readme Generator 
 
 
   ## Description
 
   
-  Project Description
+  Description of the project ...
 
 
   ## Table of Contents
 
   
   
-       * [Installation](#installation)
-       
-       * [Usage](#usage)
-       
-       * [License](#license)
-       
-       * [Contributing](#contributing)
-       
-       * [Tests](#tests)
-       
-       * [Questions](#questions)
-       
+  * [Installation](#installation)
+
+  
+  * [Usage](#usage)
+
+  
+  * [License](#license)
+
+  
+  * [Contributing](#contributing)
+
+  
+  * [Tests](#tests)
+
+  
+  * [Questions](#questions)
+
+  
 
 
   ## Installation
 
   
-  Steps required to install 
+  Steps to install the project....
 
 
   ## Usage
 
   
-  usage information...
+  usage information.....
 
 
   ## License
@@ -49,19 +55,21 @@
   ## Contributing
 
   
-  contribution guidelines...
+  contribution guidelines....
 
 
   ## Tests
 
   
-  test instructions
+  Test instructions...
 
       
   ## Questions
 
   
   yigezu1
-  yige
-  additional info...
+
+  yigezu.mulu@gmail.com
+
+  Additional information...
   

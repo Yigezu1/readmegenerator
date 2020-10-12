@@ -141,10 +141,9 @@ async function init() {
           )
         ) {
         tableOfContents += `
-       * [${proInformation[info].title}](#${proInformation[
-            info
-          ].title.toLowerCase()})
-       `;
+  * [${proInformation[info].title}](#${proInformation[info].title.toLowerCase()})
+
+  `;
         }
       }
     }
@@ -200,7 +199,9 @@ async function init() {
       
   ${proInformation.proQuestions.title}
   ${proInformation.proQuestions.content}
+
   ${proInformation.proQuestions.email}
+
   ${proInformation.proQuestions.additional}
   `;
     console.log(fileContent);
