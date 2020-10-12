@@ -32,7 +32,11 @@ const questions = [
     type: "list",
     message: "What is the license type of your project?",
     name: "license",
-    choices: ["option1", "option2", "option3", "option4"],
+    choices: [
+      "Apache License v2.0",
+      "GNU General Public License v3.0",
+      "MIT License",
+    ],
   },
   {
     type: "input",
@@ -110,8 +114,7 @@ async function init() {
       proLicense: {
         title: "License",
         content: license,
-        badge:
-          "[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)",
+        badge: "",
       },
       proContribution: {
         title: "Contributing",
@@ -129,7 +132,21 @@ async function init() {
         additional: additional,
       },
     };
-
+    switch (proInformation.proLicense.content) {
+      case "Apache License v2.0":
+        proInformation.proLicense.badge =
+          "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](#license)";
+        break;
+      case "GNU General Public License v3.0":
+        proInformation.proLicense.badge =
+          "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](#license)";
+        break;
+      case "MIT License":
+        proInformation.proLicense.badge =
+          "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#license)";
+      default:
+        break;
+    }
     let tableOfContents = "";
     let fileContent = "";
     for (const info in proInformation) {
@@ -140,8 +157,10 @@ async function init() {
             proInformation[info] === proInformation.proDesc
           )
         ) {
-        tableOfContents += `
-  * [${proInformation[info].title}](#${proInformation[info].title.toLowerCase()})
+          tableOfContents += `
+  * [${proInformation[info].title}](#${proInformation[
+            info
+          ].title.toLowerCase()})
 
   `;
         }

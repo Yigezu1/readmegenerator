@@ -1,13 +1,13 @@
-[![forthebadge](https://forthebadge.com/images/badges/uses-badges.svg)](https://forthebadge.com)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](#license)
 
 
-  # Readme Generator 
+  # Readme generator
 
 
   ## Description
 
   
-  Description of the project ...
+  Discription here ....
 
 
   ## Table of Contents
@@ -37,31 +37,31 @@
   ## Installation
 
   
-  Steps to install the project....
+  Installation steps here...
 
 
   ## Usage
 
   
-  usage information.....
+  usage information goes here...
 
 
   ## License
 
   
-  option1
+  Apache License v2.0
 
 
   ## Contributing
 
   
-  contribution guidelines....
+  contribution guidelines here....
 
 
   ## Tests
 
   
-  Test instructions...
+  Test instructions here...
 
       
   ## Questions
@@ -71,5 +71,5 @@
 
   yigezu.mulu@gmail.com
 
-  Additional information...
+  Additional information will go here...
   
