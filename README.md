@@ -1,13 +1,13 @@
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](#license)
 
 
-  # Readme generator
+  # Readme Generator
 
 
   ## Description
 
   
-  Discription here ....
+  Description goes here....
 
 
   ## Table of Contents
@@ -37,13 +37,13 @@
   ## Installation
 
   
-  Installation steps here...
+  Installations steps here....
 
 
   ## Usage
 
   
-  usage information goes here...
+  usage information ....
 
 
   ## License
@@ -55,13 +55,13 @@
   ## Contributing
 
   
-  contribution guidelines here....
+  Contribution guidelines....
 
 
   ## Tests
 
   
-  Test instructions here...
+  Steps to test.....
 
       
   ## Questions
@@ -71,5 +71,5 @@
 
   yigezu.mulu@gmail.com
 
-  Additional information will go here...
+  Additional informatio.....
   
