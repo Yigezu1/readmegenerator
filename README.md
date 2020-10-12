@@ -61,14 +61,7 @@
   ## Questions
 
   
-<<<<<<< HEAD
   yigezu1
   yige
   additional info...
   
-=======
-      yigezu1
-      yige
-      Additional information
-      
->>>>>>> 7e54252dac0c7a979c168f96fa06791d2bcff651
