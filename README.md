@@ -1,13 +1,13 @@
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](#license)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](#license)
 
 
-  # Readme Generator
+  # Readme generator
 
 
   ## Description
 
   
-  Description goes here .....
+  Description ....
 
 
   ## Table of Contents
@@ -37,31 +37,31 @@
   ## Installation
 
   
-  Installation steps .....
+  Installation step...
 
 
   ## Usage
 
   
-  Usage information......
+  Usage information...
 
 
   ## License
 
   
-  Apache License v2.0
+  GNU General Public License v3.0
 
 
   ## Contributing
 
   
-  Contribution guidelines...
+  Contribution info....
 
 
   ## Tests
 
   
-  Test instructions .....
+  Test instructions....
 
       
   ## Questions
@@ -71,5 +71,5 @@
 
   yigezu.mulu@gmail.com
 
-  Additional information....
+  Additional info....
   
