@@ -234,7 +234,7 @@ async function init() {
   ${proInformation.proQuestions.additional}
   `;
     // function call to write the file to the readme.md
-    writeToFile("README.md", fileContent);
+    writeToFile("../CodeQuiz/README.md", fileContent);
   } catch {
     throw Error();
   }
