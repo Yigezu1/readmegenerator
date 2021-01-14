@@ -234,7 +234,7 @@ async function init() {
   ${proInformation.proQuestions.additional}
   `;
     // function call to write the file to the readme.md
-    writeToFile("../team_profile_generator/README.md", fileContent);
+    writeToFile("../google-books-react-search/README.md", fileContent);
   } catch {
     throw Error();
   }
